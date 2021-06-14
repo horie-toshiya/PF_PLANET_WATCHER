@@ -1,0 +1,2 @@
+class MainContent < ApplicationRecord
+end

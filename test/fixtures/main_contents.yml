@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  admin_id: 1
+  facility: MyString
+  time: MyString
+  appeal: MyText
+  fee: MyString
+  address: MyString
+  access: MyString
+  created_at: 2021-06-13 22:14:31
+  updated_at: 2021-06-13 22:14:31
+
+two:
+  admin_id: 1
+  facility: MyString
+  time: MyString
+  appeal: MyText
+  fee: MyString
+  address: MyString
+  access: MyString
+  created_at: 2021-06-13 22:14:31
+  updated_at: 2021-06-13 22:14:31

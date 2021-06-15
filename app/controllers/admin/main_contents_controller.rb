@@ -31,7 +31,6 @@ class Admin::MainContentsController < ApplicationController
   def destroy
     @main_content = MainContent.find(params[:id])
     @main_content.destroy
-    flash[:notice] = "You have deleted book successfully."
     redirect_to admin_main_contents_path
   end
 

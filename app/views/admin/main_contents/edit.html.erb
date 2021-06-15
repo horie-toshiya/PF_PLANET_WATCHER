@@ -1,2 +1,9 @@
-<h1>Admin::MainContents#edit</h1>
-<p>Find me in app/views/admin/main_contents/edit.html.erb</p>
+<h4>投稿編集</h4>
+
+<%= form_with model: [:admin, @main_content], local:true do |f| %>
+
+<%= render "form", f: f %>
+
+<%= f.submit '更新' %>
+
+<% end %>

@@ -13,7 +13,7 @@
 　　　<% @main_contents.each do |main_content| %>
 　　　　 <tr>
 　　　　　<td><%= main_content.id %></td>
-　　　　　<td><%= link_to main_content.facility,admin_main_contents_path(main_content.id) %></td>
+　　　　　<td><%= link_to main_content.facility,admin_main_content_path(main_content.id) %></td>
 　　　　　<td><%= main_content.address %></td>
 　　　　 </tr>
       <% end %>

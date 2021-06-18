@@ -1,1 +1,23 @@
 <h4>お問い合わせ詳細</h4>
+
+<table class="table table-hover table-inverse">
+      <tr>
+       <td>投稿者</td>
+         <td>
+          <%= @inquiry.name %>
+         </td>
+      </tr>
+      <tr>
+       <td>メールアドレス</td>
+         <td>
+          <%= @inquiry.email %>
+         </td>
+      </tr>
+      <tr>
+       <td>メッセージ</td>
+        <td>
+          <%= @inquiry.message %>
+        </td>
+      </tr>
+      <tr>
+</table>

@@ -1,2 +1,40 @@
-<h1>Public::MainContents#show</h1>
-<p>Find me in app/views/public/main_contents/show.html.erb</p>
+<h4>投稿詳細</h4>
+
+<table class="table table-hover table-inverse">
+      <tr>
+       <td>施設名</td>
+         <td>
+          <%= @main_content.facility %>
+         </td>
+      </tr>
+      <tr>
+       <td>営業時間</td>
+         <td>
+          <%= @main_content.time %>
+         </td>
+      </tr>
+      <tr>
+       <td>説明文</td>
+        <td>
+          <%= @main_content.appeal %>
+        </td>
+      </tr>
+      <tr>
+       <td>料金</td>
+        <td>
+          <%= @main_content.fee %>
+        </td>
+      </tr>
+      <tr>
+       <td>住所</td>
+        <td>
+          <%= @main_content.address %>
+        </td>
+      </tr>
+      <tr>
+       <td>アクセス</td>
+        <td>
+          <%= @main_content.access %>
+        </td>
+      </tr>
+</table>

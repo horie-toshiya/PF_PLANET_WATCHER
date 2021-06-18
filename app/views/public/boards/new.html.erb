@@ -1,0 +1,9 @@
+<h2>新規投稿</h2>
+<!-- form_with部分 -->
+<%= form_with model: [@board], local:true do |f| %>
+
+<%= render "form", f: f %>
+
+<%= f.submit '投稿' %>
+
+<% end %>

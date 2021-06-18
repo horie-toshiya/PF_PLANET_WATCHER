@@ -1,1 +1,36 @@
 <h4>掲示板詳細</h4>
+
+<table class="table table-hover table-inverse">
+      <tr>
+       <td>投稿ID</td>
+         <td>
+          <%= @board.id %>
+         </td>
+      </tr>
+      <tr>
+       <td>投稿日時</td>
+         <td>
+          <%= @board.created_at %>
+         </td>
+      </tr>
+      <tr>
+       <td>投稿者</td>
+        <td>
+          <%= @board.name %>
+        </td>
+      </tr>
+      <tr>
+       <td>タイトル</td>
+        <td>
+          <%= @board.title %>
+        </td>
+      </tr>
+      <tr>
+       <td>本文</td>
+        <td>
+          <%= @board.sentence %>
+        </td>
+      </tr>
+      <%= link_to "削除", admin_board_path(@board.id), method: :delete, class: "btn btn-danger" %>
+      <%= link_to "一覧", admin_boards_path(@board.id), class: "btn btn-primary" %>
+  </table>

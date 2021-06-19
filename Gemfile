@@ -78,3 +78,8 @@ gem 'font-awesome-sass', '~> 5.13'
 
 # デバッガ
 gem 'pry-byebug', group: :development
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end

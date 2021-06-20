@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-root "homes#top"
+root to: 'homes#top'
 
   devise_for :admins, controllers: {
   sessions:      'admins/sessions',

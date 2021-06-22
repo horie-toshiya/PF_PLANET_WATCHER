@@ -1,0 +1,2 @@
+class MainCommentsController < ApplicationController
+end

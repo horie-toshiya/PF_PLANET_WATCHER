@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comment_content: MyString
+  customer: one
+  board: one
+  customer_id: 1
+  board_id: 1
+
+two:
+  comment_content: MyString
+  customer: two
+  board: two
+  customer_id: 1
+  board_id: 1

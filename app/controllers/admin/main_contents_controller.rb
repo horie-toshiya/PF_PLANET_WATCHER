@@ -7,6 +7,7 @@ class Admin::MainContentsController < ApplicationController
 
   def show
     @main_content = MainContent.find(params[:id])
+    @main_comment = MainComment.new
   end
 
   def new
@@ -15,6 +16,7 @@ class Admin::MainContentsController < ApplicationController
 
   def create
     @main_content = MainContent.new(main_content_params)
+    @main_content.admin_id = current_admin.id
     @main_content.save
     redirect_to admin_main_contents_path
   end
@@ -38,7 +40,7 @@ class Admin::MainContentsController < ApplicationController
 
   private
   def main_content_params
-    params.require(:main_content).permit(:facility, :time, :appeal, :fee, :address, :access)
+    params.require(:main_content).permit(:facility, :time, :appeal, :fee, :address, :access, :admin_id)
   end
 
 end

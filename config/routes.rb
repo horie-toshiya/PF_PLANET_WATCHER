@@ -6,19 +6,22 @@ get 'home/top' => 'homes#top'
   devise_for :admins, controllers: {
   sessions:      'admins/sessions',
 }
-devise_for :customers, controllers: {
+  devise_for :customers, controllers: {
   sessions:      'customers/sessions',
   passwords:     'customers/passwords',
   registrations: 'customers/registrations'
 }
 
   scope module: :public do
-    resources :main_contents, only: [:index, :show]
+    resources :main_contents, only: [:index, :show] do
+     resources :main_comments, only: [:create, :destroy]
+    end
     resources :events, only: [:index]
     resources :boards
     resources :inquiries, only: [:index, :new, :create,]
     get 'inquiries/complete'
   end
+
   namespace :admin do
    resources :main_contents
    resources :events

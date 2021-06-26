@@ -37,4 +37,18 @@
           <%= @main_content.access %>
         </td>
       </tr>
+      <tr>
+       <td>コメント一覧</td>
+        <td>
+          <%= @main_comment.comment_content %>
+        </td>
+      </tr>
+      <tr>
+      <%= form_with(model:[@main_content, @main_comment], local: true) do |f| %>
+        <td><%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %></td>
+        <td>
+         <%= f.submit "送信する" %>
+        </td>
+       </tr>
+      <% end %>
 </table>

@@ -17,8 +17,11 @@ class Admin::MainContentsController < ApplicationController
   def create
     @main_content = MainContent.new(main_content_params)
     @main_content.admin_id = current_admin.id
-    @main_content.save
+    if @main_content.save
     redirect_to admin_main_contents_path
+    else
+      render :new
+    end
   end
 
   def edit

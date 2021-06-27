@@ -40,7 +40,9 @@
       <tr>
        <td>コメント一覧</td>
         <td>
-          <%= @main_comment.id %>
+         <% @main_content.main_comments.each do |main_comment| %>
+          <div><%= main_comment.comment_content %></div>
+          <% end %>
         </td>
       </tr>
 

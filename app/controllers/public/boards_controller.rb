@@ -5,7 +5,9 @@ class Public::BoardsController < ApplicationController
   end
 
   def show
+    @boards = Board.all
     @board = Board.find(params[:id])
+    @board_comment = BoardComment.new
   end
 
   def new

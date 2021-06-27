@@ -7,6 +7,7 @@ class Public::MainContentsController < ApplicationController
     @main_contents = MainContent.all
     @main_content = MainContent.find(params[:id])
     @main_comment = MainComment.new
+    # @main_comments = @main_content.main_comments
   end
 
   private

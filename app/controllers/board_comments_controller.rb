@@ -1,2 +1,0 @@
-class BoardCommentsController < ApplicationController
-end

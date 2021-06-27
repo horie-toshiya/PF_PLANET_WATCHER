@@ -6,4 +6,7 @@ class Customer < ApplicationRecord
 
   has_many :board_comments, dependent: :destroy
   has_many :main_comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
 end
+
+

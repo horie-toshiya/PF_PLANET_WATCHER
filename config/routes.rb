@@ -14,10 +14,14 @@ get 'home/top' => 'homes#top'
 
   scope module: :public do
     resources :main_contents, only: [:index, :show] do
+     resource :likes, only: [:create, :destroy]
+
      resources :main_comments, only: [:create, :destroy]
     end
     resources :events, only: [:index]
-    resources :boards
+    resources :boards do
+    resources :board_comments, only: [:create, :destroy]
+  end
     resources :inquiries, only: [:index, :new, :create,]
     get 'inquiries/complete'
   end

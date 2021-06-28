@@ -72,3 +72,9 @@
        </tr>
       <% end %>
 </table>
+
+<%if @main_content.image_id.nil? %>
+      画像なし
+<%else%>
+      <%= image_tag attachment_url(@main_content, :image, :fill, 300, 300, format: "jpg") %>
+<%end %>

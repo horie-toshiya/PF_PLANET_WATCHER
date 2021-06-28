@@ -45,7 +45,12 @@
           <% end %>
         </td>
       </tr>
-
+      <%= @main_content.likes.count %> いいね
+      <%if @main_content.image_id.nil? %>
+      画像なし
+      <%else%>
+      <%= image_tag attachment_url(@main_content, :image, :fill, 300, 300, format: "jpg") %>
+      <%end %>
       <%= link_to "編集", edit_admin_main_content_path(@main_content.id), class: "btn btn-success" %>
       <%= link_to "削除", admin_main_content_path(@main_content.id), method: :delete, class: "btn btn-danger" %>
       <%= link_to "一覧", admin_main_contents_path(@main_content.id), class: "btn btn-primary" %>

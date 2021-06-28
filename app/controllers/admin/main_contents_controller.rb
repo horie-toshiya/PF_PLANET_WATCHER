@@ -43,7 +43,7 @@ class Admin::MainContentsController < ApplicationController
 
   private
   def main_content_params
-    params.require(:main_content).permit(:facility, :time, :appeal, :fee, :address, :access, :admin_id)
+    params.require(:main_content).permit(:facility, :time, :appeal, :fee, :address, :access, :admin_id,:image)
   end
 
 end

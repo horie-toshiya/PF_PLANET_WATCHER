@@ -7,7 +7,7 @@ class Public::BoardsController < ApplicationController
   def show
     @boards = Board.all
     @board = Board.find(params[:id])
-    @board_comment = BoardComment.new
+    @board_comment = BoardComment.joins(:board).where("board_id = ?",params[:id])
   end
 
   def new

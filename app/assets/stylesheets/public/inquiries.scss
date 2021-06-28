@@ -1,3 +1,39 @@
 // Place all the styles related to the public/inquiries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#inquiries {
+  background-image: url(inquiries.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  text-align: center;
+}
+
+#inquiries .content {
+  margin-top: 150px;
+}
+
+#inquiries h1 {
+  line-height: 2;
+  color: transparent;
+  text-stroke: 1px white;
+  -webkit-text-stroke: 1px white;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  margin-bottom: 120px;
+}
+
+#inquiries .field {
+  font-size: 22px;
+  color: white;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  margin-bottom: 30px;
+}
+
+#inquiries p {
+  font-size: 22px;
+  line-height: 4;
+  color: white;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  margin-bottom: 30px;
+}

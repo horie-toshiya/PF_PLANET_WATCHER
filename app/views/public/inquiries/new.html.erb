@@ -1,10 +1,20 @@
 
-<h2>お問い合わせ</h2>
-<!-- form_with部分 -->
-<%= form_with model: [@inquiry], local:true do |f| %>
+<body id="inquiries">
+    <div id="wrap">
+      <div class="content">
 
-<%= render "form", f: f %>
+        <h1>お問い合わせ</h1>
 
-<%= f.submit '投稿' %>
+           <div class="field">
+            <%= form_with model: [@inquiry], local:true do |f| %>
 
-<% end %>
+             <%= render "form", f: f %>
+
+             <%= f.submit '投稿' %>
+
+            <% end %>
+           </div>
+      </div>
+    </div>
+</div>
+

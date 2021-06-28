@@ -1,3 +1,57 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#top h1 {
+  line-height: 2;
+  color: transparent;
+  text-stroke: 1px white;
+  -webkit-text-stroke: 1px white;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  margin-bottom: 120px;
+}
+
+#top .content {
+  margin-top: 200px;
+}
+
+#top p {
+  font-size: 22px;
+  line-height: 4;
+  color: #ffffff;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  margin-bottom: 30px;
+}
+
+.btn a {
+  background-color: #009cd3;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  width: 110px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 3px solid #009cd3;
+}
+
+.btn a:hover {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #009cd3;
+}
+
+#top {
+  background-image: url(home-back.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+}
+
+img.logo {
+  margin-top: 200px;
+  width: 35%;
+  height: 35%;
+}

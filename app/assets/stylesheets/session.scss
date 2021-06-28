@@ -1,0 +1,27 @@
+#session {
+  background-image: url(home-back.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+}
+
+#session .content {
+  margin-top: 150px;
+}
+
+#session h1 {
+  line-height: 2;
+  color: transparent;
+  text-stroke: 1px white;
+  -webkit-text-stroke: 1px white;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  margin-bottom: 120px;
+}
+
+#session .field {
+  font-size: 22px;
+  color: white;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  margin-bottom: 30px;
+}

@@ -1,80 +1,59 @@
-<h4>投稿詳細</h4>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Planet Watcher Main Content_show</title>
+  </head>
 
-<table class="table table-hover table-inverse">
-      <tr>
-       <td>施設名</td>
-         <td>
-          <%= @main_content.facility %>
-         </td>
-      </tr>
-      <tr>
-       <td>営業時間</td>
-         <td>
-          <%= @main_content.time %>
-         </td>
-      </tr>
-      <tr>
-       <td>説明文</td>
-        <td>
-          <%= @main_content.appeal %>
-        </td>
-      </tr>
-      <tr>
-       <td>料金</td>
-        <td>
-          <%= @main_content.fee %>
-        </td>
-      </tr>
-      <tr>
-       <td>住所</td>
-        <td>
-          <%= @main_content.address %>
-        </td>
-      </tr>
-      <tr>
-       <td>アクセス</td>
-        <td>
-          <%= @main_content.access %>
-        </td>
-      </tr>
-      <tr>
-       <td>コメント一覧</td>
-        <td>
-         <% @main_content.main_comments.each do |main_comment| %>
-          <div><%= main_comment.comment_content %></div>
-          <% if main_comment.customer == current_customer %>
-            <div class="comment-delete">
+  <body id="main_show">
+
+   <h1>投稿詳細</h1>
+
+    <div class="wrap">
+      <%if @main_content.image_id.nil? %>
+        画像なし
+      <%else%>
+        <%= image_tag attachment_url(@main_content, :image) %>
+      <%end %>
+          <div class="box">
+           <p><%= @main_content.facility %></p>
+           <p><%= @main_content.time %></p>
+           <p><%= @main_content.appeal %></p>
+           <p><%= @main_content.fee %></p>
+           <p><%= @main_content.address %></p>
+           <p><%= @main_content.access %></p>
+           <% if @main_content.liked_by?(current_customer) %>
+            <p>
+              <%= link_to main_content_likes_path(@main_content), method: :delete do %>
+                  ♥<%= @main_content.likes.count %> good
+              <% end %>
+            </p>
+           <% else %>
+            <p>
+              <%= link_to main_content_likes_path(@main_content), method: :post do %>
+                  ♡<%= @main_content.likes.count %> good
+              <% end %>
+            </p>
+           <% end %>
+          </div>
+    </div>
+
+    <br>
+
+    <% @main_content.main_comments.each do |main_comment| %>
+        <font color="black"><dd><%= current_customer.name %></font><br>
+          <%= main_comment.comment_content %></dd>
+           <% if main_comment.customer == current_customer %>
+            <dt><div class="comment-delete">
              <%= link_to "削除", main_content_main_comment_path(main_comment.main_content, main_comment), method: :delete %>
-            </div>
-          <% end %>
-         <% end %>
-        </td>
-      </tr>
-      <% if @main_content.liked_by?(current_customer) %>
-    <p>
-      <%= link_to main_content_likes_path(@main_content), method: :delete do %>
-        ♥<%= @main_content.likes.count %> いいね
-      <% end %>
-    </p>
-    <% else %>
-    <p>
-      <%= link_to main_content_likes_path(@main_content), method: :post do %>
-        ♡<%= @main_content.likes.count %> いいね
-      <% end %>
-    </p>
-  <% end %>
-      <tr>
-      <%= form_with(model:[@main_content, @main_comment], local: true) do |f| %>
-        <td><%= f.text_area :comment_content, rows:'5',placeholder: "コメントをここに" %></td>
-        <td>
-         <%= f.submit "送信する" %>
-        </td>
-       </tr>
-      <% end %>
-</table>
+            </div></dt>
+           <% end %>
+    <% end %>
 
-<%if @main_content.image_id.nil? %>
-      画像なし
-<%else%>
-      <%= image_tag attachment_url(@main_content, :image, :fill, 300, 300, format: "jpg") %>
-<%end %>
+      <dl>
+        <%= form_with(model:[@main_content, @main_comment], local: true) do |f| %>
+          <%= f.text_area :comment_content, cols:'50', rows:'5', placeholder: "コメントをここに" %>
+          <%= f.submit "送信する" %>
+        <% end %></dl>
+  </body>
+</html>

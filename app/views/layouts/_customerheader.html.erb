@@ -6,19 +6,20 @@
   </button>
 
   <div class="collapse navbar-collapse" id="bs-navi">
-      <!--<a class="navbar-brand" href="/"><img src="assetes/" alt="PLANET WATCHER"></a>-->
+    <font color="white"><h3>Planet Watcher</h3></font>
+
     <ul class="navbar-nav ml-auto">
       <%= link_to main_contents_path do %>
-       <ruby><h2>MAIN.</h2><rt>プラネタリウム紹介</rt></ruby>
+       <font color="white"><ruby><h2>MAIN.</h2><rt>プラネタリウム紹介</rt></ruby></font>
       <% end %>
       <%= link_to events_path do %>
-       <ruby><h2>EVENT.</h2><rt>イベント予定</rt></ruby>
+       <font color="white"><ruby><h2>EVENT.</h2><rt>イベント予定</rt></ruby></font>
       <% end %>
       <%= link_to boards_path do %>
-       <ruby><h2>BBS.</h2><rt>掲示板</rt></ruby>
+       <font color="white"><ruby><h2>BBS.</h2><rt>掲示板</rt></ruby></font>
       <% end %>
       <%= link_to new_inquiry_path do %>
-       <ruby><h2>INFO.</h2><rt>問い合わせ</rt></ruby>
+       <font color="white"><ruby><h2>INFO.</h2><rt>問い合わせ</rt></ruby></font>
       <% end %>
     </ul>
     <%= link_to destroy_customer_session_path, method: :delete do %>

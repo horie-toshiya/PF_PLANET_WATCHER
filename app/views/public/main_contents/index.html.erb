@@ -1,20 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Planet Watcher Main Content</title>
+  </head>
 
- <h4>投稿一覧</h4>
- <table class="table table-hover table-inverse">
-      <thead>
-        <tr>
-          <th>投稿ID</th>
-          <th>施設名</th>
-          <th>住所</th>
-        </tr>
-      </thead>
-     <tbody>
-　　　<% @main_contents.each do |main_content| %>
-　　　　 <tr>
-　　　　　<td><%= main_content.id %></td>
-　　　　　<td><%= link_to main_content.facility,main_content_path(main_content.id) %></td>
-　　　　　<td><%= main_content.address %></td>
-　　　　 </tr>
-      <% end %>
-     </tbody>
-  </table>
+  <body id="main_index">
+
+ 　<h1>プラネタリウム紹介</h1>
+
+　　<% @main_contents.each do |main_content| %>
+  　　<div class="wrap">
+  　　　　<%= attachment_image_tag(main_content, :image) %>
+  　　　　<div class="box">
+    　　 　<h2><%= link_to main_content.facility,main_content_path(main_content.id) %></h2>
+    　 　 <h5><%= main_content.appeal %></h5>
+    　　   <h5><%= main_content.address %></h5>
+    　   </div>
+  　　</div>
+    <% end %>
+  </body>
+</html>

@@ -1,3 +1,125 @@
 // Place all the styles related to the public/main_contents controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//id指定#main_index
+
+//要素を左右に分割
+#main_index .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wrap:not(:last-child) {
+  margin-bottom: 80px;
+}
+
+//要素の分割を交互に繰り返す
+.wrap:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+//イメージを楕円形にコーティング
+ #main_index img {
+  display: block;
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 30%;
+ }
+
+.box {
+  width: 48%;
+  border-bottom: solid #f7f7f7;
+}
+
+#main_index {
+  background-color: #000000;
+}
+
+//見出しに下線
+#main_index h1 {
+  text-align: center;
+  line-height: 4;
+  color: #ffffff;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  margin-bottom: 30px;
+  text-decoration: underline #0E4D52;
+}
+
+#main_index h2 {
+  color: #ffffff;
+  font-family: 'Tsukushi A Round Gothic', serif;
+}
+
+#main_index h5 {
+  color: #ffffff;
+  font-family: 'Tsukushi A Round Gothic', serif;
+}
+
+
+//id指定#main_show
+
+//要素を左右に分割
+#main_show .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 50px;
+  font-size: 22px;
+  color: #ffffff;
+  font-family: 'Tsukushi A Round Gothic', serif;
+}
+
+#main_show img {
+  display: block;
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 30%;
+ }
+
+#main_show .box {
+  width: 48%;
+}
+
+#main_show h1 {
+  text-align: center;
+  line-height: 4;
+  color: #ffffff;
+  font-family: 'Tsukushi A Round Gothic', serif;
+  margin-bottom: 30px;
+  text-decoration: underline #0E4D52;
+}
+
+#main_show {
+  background-color: #000000;
+}
+
+dl {
+  display: flex;
+  justify-content: center;
+}
+
+dt {
+  padding: 20px 30px;
+  width: 100px;
+  border-bottom: 2px solid #0277b4;
+}
+
+dd {
+  padding: 20px 30px;
+  width: calc(100% - 230px);
+  border-bottom: 1px solid #6f6f6f;
+  font-size: 22px;
+  color: #ffffff;
+  font-family: 'Tsukushi A Round Gothic', serif;
+}
+
+.link {
+  text-decoration: none;
+  color: white ;
+}

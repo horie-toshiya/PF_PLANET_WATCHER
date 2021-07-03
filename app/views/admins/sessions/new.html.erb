@@ -4,11 +4,13 @@
       <div class="content">
 
         <h1>Log in</h1>
-
            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
              <p>
               <div class="field">
+
+               <%= link_to "︎新規登録はこちらから", new_admin_registration_path %><br /><br />
+
                <%= f.label :email %><br />
                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
               </div>

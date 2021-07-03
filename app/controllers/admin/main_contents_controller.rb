@@ -16,7 +16,7 @@ class Admin::MainContentsController < ApplicationController
 
   def create
     @main_content = MainContent.new(main_content_params)
-    @main_content.admin_id = current_admin.id
+    @main_content.score = Language.get_data(main_content_params[:appeal])  #API
     if @main_content.save
     redirect_to admin_main_contents_path
     else

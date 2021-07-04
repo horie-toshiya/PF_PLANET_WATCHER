@@ -47,16 +47,6 @@ ActiveRecord::Schema.define(version: 2021_07_03_130942) do
     t.string "time"
   end
 
-  create_table "comment_mains", force: :cascade do |t|
-    t.string "comment_content"
-    t.integer "customer_id"
-    t.integer "main_content_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["customer_id"], name: "index_comment_mains_on_customer_id"
-    t.index ["main_content_id"], name: "index_comment_mains_on_main_content_id"
-  end
-
   create_table "customers", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -118,18 +108,6 @@ ActiveRecord::Schema.define(version: 2021_07_03_130942) do
     t.datetime "updated_at", null: false
     t.string "image_id"
     t.decimal "score", precision: 5, scale: 3
-  end
-
-  create_table "mains", force: :cascade do |t|
-    t.integer "admin_id"
-    t.string "facility"
-    t.string "time"
-    t.text "appeal"
-    t.string "fee"
-    t.string "address"
-    t.string "access"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

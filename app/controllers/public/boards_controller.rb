@@ -16,6 +16,9 @@ class Public::BoardsController < ApplicationController
 
   def create
     @board = Board.new(board_params)
+    # todo: view form削除する
+    @board.customer_id = current_customer.id
+    @board.name = current_customer.name
     @board.save
     redirect_to boards_path
   end

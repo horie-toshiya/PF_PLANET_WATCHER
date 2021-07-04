@@ -9,7 +9,5 @@ class MainContent < ApplicationRecord
   end
 
   belongs_to :admins, optional: true
-
   attachment :image
-
 end

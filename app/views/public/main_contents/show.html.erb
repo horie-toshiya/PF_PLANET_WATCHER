@@ -19,6 +19,7 @@
            <p><%= @main_content.facility %></p>
            <p><%= @main_content.time %></p>
            <p><%= @main_content.appeal %></p>
+           <p class="sentiment-score">本文の感情分析スコア[<%= @main_content.score %>]</p>
            <p><%= @main_content.fee %></p>
            <p><%= @main_content.address %></p>
            <p><%= @main_content.access %></p>
@@ -41,7 +42,8 @@
     <br>
 
     <% @main_content.main_comments.each do |main_comment| %>
-        <font color="black"><dd><%= current_customer.name %></font><br>
+    <dd><p class="sentiment-score">本文の感情分析スコア[<%= main_comment.score %>]</p>
+        <font color="white"><%= current_customer.name %></font><br>
           <%= main_comment.comment_content %></dd>
            <% if main_comment.customer == current_customer %>
             <dt><div class="comment-delete">

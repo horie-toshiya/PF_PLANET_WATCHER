@@ -4,7 +4,6 @@ class Public::MainCommentsController < ApplicationController
     main_content = MainContent.find(params[:main_content_id])
     comment = current_customer.main_comments.new(main_comment_params)
     comment.main_content_id = main_content.id
-    # main_content.score = Language.get_data(main_comment_params[:comment_content])  #この行を追加
     comment.score = Language.get_data(main_comment_params[:comment_content])  #この行を追加
     comment.save!
     redirect_to main_content_path(main_content)

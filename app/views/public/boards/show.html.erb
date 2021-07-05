@@ -44,15 +44,14 @@
          <% end %>
         </td>
       </tr>
-      <tr>
-       <%= form_with url: board_board_comments_path(@board) do |f| %>
-         <td><%= f.text_area :comment_content, rows:'5',placeholder: "コメントをここに" %></td>
-         <td>
-          <%= f.submit "送信する" %>
-         </td>
-       <% end %>
-      </tr>
-</table>
+     <tr>
+      <%= form_with url: board_board_comments_path(@board) do |f| %>
+        <td><%= f.text_area :comment_content, rows:'5',placeholder: "コメントをここに" %></td>
+        <td>
+         <%= f.submit "送信する" %>
+        </td>
+      <% end %>
+     </tr>
       <%= link_to "編集", edit_board_path(@board.id), class: "btn btn-success" %>
       <%= link_to "削除", board_path(@board.id), method: :delete, class: "btn btn-danger" %>
       <%= link_to "一覧", boards_path(@board.id), class: "btn btn-primary" %>
